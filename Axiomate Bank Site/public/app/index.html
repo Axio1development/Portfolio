@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Online Banking — Axiomate</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b2545">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;650;700;800&display=swap" rel="stylesheet">
+  <script src="/assets/js/theme.js"></script>
+  <link rel="stylesheet" href="/assets/css/base.css?v=1">
+  <link rel="stylesheet" href="/assets/css/app.css?v=1">
+</head>
+<body class="app">
+  <div class="shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#/"><img src="/assets/img/logo.svg" alt="">Axiomate</a>
+      <nav class="nav" id="side-nav"></nav>
+      <div class="side-foot">
+        <div class="side-user" id="side-user"></div>
+        <a class="btn btn-ghost btn-sm" href="#" data-logout style="justify-content:flex-start">Sign out</a>
+        <p class="concept-note">Concept bank. Balances are simulated and no real money moves.</p>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar" id="topbar">
+        <a class="brand" href="#/"><img src="/assets/img/logo.svg" alt="">Axiomate</a>
+        <h1 id="page-title">Overview</h1>
+        <button class="icon-btn" type="button" id="theme-btn" aria-label="Switch theme"></button>
+        <a class="icon-btn" href="#/notifications" aria-label="Notifications" id="bell"></a>
+        <a class="icon-btn" href="#/settings" aria-label="Settings" id="gear"></a>
+      </header>
+      <main class="view" id="view" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <nav class="tabbar" id="tabbar" aria-label="Main navigation"></nav>
+  <div class="modal-root" id="modal-root" role="dialog" aria-modal="true"></div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="/assets/js/app.js?v=1"></script>
+</body>
+</html>

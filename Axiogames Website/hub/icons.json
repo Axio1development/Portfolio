@@ -1,0 +1,132 @@
+{
+ "blossom-tree": {
+  "label": "Blossom tree",
+  "box": "0 0 48 48",
+  "color": true,
+  "svg": "<path fill='#1a1a1a' stroke='#d0d0d0' stroke-width='1' d='M21.5 45h5.5l-.9-9.6 6.4-5.9-1.9-2-5 4.6-.6-7.6h-2.6l-.4 6.8-4.9-4-1.8 2.1 6 5.1z'/><circle cx='16' cy='18' r='8.5' fill='#e6e6e6'/><circle cx='30.5' cy='14.5' r='9.5' fill='#bdbdbd'/><circle cx='24' cy='23' r='8' fill='#f5f5f5'/><circle cx='37' cy='24' r='6.5' fill='#e6e6e6'/><circle cx='11.5' cy='27' r='5.5' fill='#bdbdbd'/><circle cx='22' cy='11' r='5' fill='#ffffff'/><circle cx='33' cy='29' r='3.5' fill='#f5f5f5'/><circle cx='9.5' cy='39' r='1.4' fill='#e6e6e6'/><circle cx='38' cy='37' r='1.2' fill='#bdbdbd'/><circle cx='33' cy='42' r='1.1' fill='#f5f5f5'/><circle cx='15' cy='42.5' r='1' fill='#bdbdbd'/>"
+ },
+ "hash": {
+  "label": "Hash",
+  "svg": "<path d='M9.6 3h2L10.4 21h-2zm5 0h2L15.4 21h-2zM4 8h16.5v2H4zm-.5 6H20v2H3.5z'/>"
+ },
+ "chat": {
+  "label": "Chat",
+  "svg": "<path d='M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 2-2z'/>"
+ },
+ "megaphone": {
+  "label": "Announcements",
+  "svg": "<path d='M3 9h4l7-4v14l-7-4H3zm13 0h1.5a3 3 0 0 1 0 6H16zM7 15.5l1.6 4.5h2.6L9.6 15.5z'/>"
+ },
+ "lock": {
+  "label": "Lock",
+  "svg": "<path fill-rule='evenodd' d='M7 10V7a5 5 0 0 1 10 0v3h2v11H5V10zm2 0h6V7a3 3 0 0 0-6 0zm3 4a2 2 0 0 0-1 3.7V19h2v-1.3a2 2 0 0 0-1-3.7z'/>"
+ },
+ "shield": {
+  "label": "Shield",
+  "svg": "<path d='M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5z'/>"
+ },
+ "gamepad": {
+  "label": "Games",
+  "svg": "<path fill-rule='evenodd' d='M7 7h10a5 5 0 0 1 4.9 6l-.9 4a2.5 2.5 0 0 1-4.3 1.1L14.5 16h-5l-2.2 2.1A2.5 2.5 0 0 1 3 17l-.9-4A5 5 0 0 1 7 7zm0 3v2H5v1.6h2v2h1.6v-2h2V12h-2v-2zm9.3.6a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zm2 2.4a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z'/>"
+ },
+ "swap": {
+  "label": "Trading",
+  "svg": "<path d='M7 3 2 8l5 5V9.5h9v-3H7zm10 8v3.5H8v3h9V21l5-5z'/>"
+ },
+ "help": {
+  "label": "Help",
+  "svg": "<path fill-rule='evenodd' d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 15.6a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6zm1.7-5.2c-.8.5-1 .8-1 1.6h-2.2c0-1.7.6-2.4 1.8-3.2.8-.5 1.1-.9 1.1-1.5 0-.7-.6-1.2-1.4-1.2-.9 0-1.5.5-1.6 1.4H8.2C8.3 7.4 9.8 6 12.1 6c2.2 0 3.7 1.2 3.7 3 0 1.3-.7 2.2-2.1 3.4z'/>"
+ },
+ "star": {
+  "label": "Star",
+  "svg": "<path d='m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5-4.9-4.6 6.6-.8z'/>"
+ },
+ "blossom": {
+  "label": "Blossom",
+  "svg": "<circle cx='12' cy='5.6' r='3.6'/><circle cx='18.2' cy='10.1' r='3.6'/><circle cx='15.8' cy='17.4' r='3.6'/><circle cx='8.2' cy='17.4' r='3.6'/><circle cx='5.8' cy='10.1' r='3.6'/>"
+ },
+ "heart": {
+  "label": "Heart",
+  "svg": "<path d='M12 21 3.6 12.7A5 5 0 0 1 12 6.1a5 5 0 0 1 8.4 6.6z'/>"
+ },
+ "music": {
+  "label": "Music",
+  "svg": "<path d='M9 3v11.3A3.5 3.5 0 1 0 11 17.5V8h7V3z'/>"
+ },
+ "image": {
+  "label": "Media",
+  "svg": "<path fill-rule='evenodd' d='M3 4h18v16H3zm2 2v9.5l4-4 3 3 3-4 4 5.5V6zm3.5 1a2 2 0 1 0 0 4 2 2 0 0 0 0-4z'/>"
+ },
+ "code": {
+  "label": "Code",
+  "svg": "<path d='M8.6 6 3 12l5.6 6 1.4-1.4L5.8 12 10 7.4zm6.8 0L14 7.4l4.2 4.6-4.2 4.6 1.4 1.4 5.6-6z'/>"
+ },
+ "trophy": {
+  "label": "Trophy",
+  "svg": "<path fill-rule='evenodd' d='M7 3h10v2h4v3a4 4 0 0 1-4.2 4 5 5 0 0 1-3.8 3.9V18h3v3H8v-3h3v-2.1A5 5 0 0 1 7.2 12 4 4 0 0 1 3 8V5h4zm-2 4v1a2 2 0 0 0 2 2V7zm12 0v3a2 2 0 0 0 2-2V7z'/>"
+ },
+ "gift": {
+  "label": "Giveaways",
+  "svg": "<path d='M3 8h18v4H3zm1 5h7v8H4zm9 0h7v8h-7zM12 7.5C10 3.5 6 3.5 6 6c0 1.5 2 1.5 6 1.5zm0 0c2-4 6-4 6-1.5 0 1.5-2 1.5-6 1.5z'/>"
+ },
+ "calendar": {
+  "label": "Events",
+  "svg": "<path fill-rule='evenodd' d='M7 2h2v2h6V2h2v2h4v17H3V4h4zM5 9v10h14V9z'/>"
+ },
+ "bell": {
+  "label": "Bell",
+  "svg": "<path d='M12 22a2.5 2.5 0 0 0 2.5-2.5h-5A2.5 2.5 0 0 0 12 22zm7-6v-5a7 7 0 0 0-5.5-6.8V3h-3v1.2A7 7 0 0 0 5 11v5l-2 2v.5h18V18z'/>"
+ },
+ "fire": {
+  "label": "Fire",
+  "svg": "<path d='M12 2s6 5 6 11a6 6 0 0 1-12 0c0-3 2-5 2-5s0 3 2 4c0-5 2-10 2-10z'/>"
+ },
+ "rules": {
+  "label": "Rules",
+  "svg": "<path fill-rule='evenodd' d='M5 3h14v18H5zm3 4v2h8V7zm0 4v2h8v-2zm0 4v2h5v-2z'/>"
+ },
+ "ticket": {
+  "label": "Tickets",
+  "svg": "<path fill-rule='evenodd' d='M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3a2 2 0 0 0 0-4zm7 0v2h2V7zm0 4v2h2v-2zm0 4v2h2v-2z'/>"
+ },
+ "roblox": {
+  "label": "Roblox",
+  "svg": "<path fill-rule='evenodd' d='M6.2 2 2 17.8 17.8 22 22 6.2zm7.6 13.4-4.2-1.1 1.1-4.2 4.2 1.1z'/>"
+ },
+ "home": {
+  "label": "Home",
+  "svg": "<path d='M12 3 2 11h3v9h5v-6h4v6h5v-9h3z'/>"
+ },
+ "people": {
+  "label": "Members",
+  "svg": "<path d='M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm7 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM1 20c0-4 3.6-6 8-6s8 2 8 6v1H1zm16.5-6c3 .3 5.5 2 5.5 5.5V21h-4v-1c0-2.3-.6-4.4-1.5-6z'/>"
+ },
+ "crown": {
+  "label": "Crown",
+  "svg": "<path d='M3 7l4.5 4L12 4l4.5 7L21 7l-2 12H5zm2 13h14v2H5z'/>"
+ },
+ "shop": {
+  "label": "Shop",
+  "svg": "<path d='M4 4h16l1 5a3 3 0 0 1-5 2.2 3 3 0 0 1-4 .8 3 3 0 0 1-4-.8A3 3 0 0 1 3 9zM5 13.5c1 .4 2 .4 3 .1 1.2.6 2.7.7 4 .3 1.3.4 2.8.3 4-.3 1 .3 2 .3 3-.1V20h-5v-4h-4v4H5z'/>"
+ },
+ "ball": {
+  "label": "Football",
+  "svg": "<path fill-rule='evenodd' d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 4.2 3.3 2.4-1.3 3.9H10l-1.3-3.9zM4.3 10.4l2.6.6 1.3 4-1.7 2.2a7.9 7.9 0 0 1-2.2-6.8zm15.4 0a7.9 7.9 0 0 1-2.2 6.8l-1.7-2.2 1.3-4zM9.4 16.6h5.2l1.5 2.2a8 8 0 0 1-8.2 0z'/>"
+ },
+ "skull": {
+  "label": "Curse",
+  "svg": "<path fill-rule='evenodd' d='M12 2a8 8 0 0 0-8 8c0 2.7 1.3 4.6 3 5.8V19a1 1 0 0 0 1 1h1v-2h2v2h2v-2h2v2h1a1 1 0 0 0 1-1v-3.2c1.7-1.2 3-3.1 3-5.8a8 8 0 0 0-8-8zM8.5 9a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm7 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4z'/>"
+ },
+ "gate": {
+  "label": "Gate",
+  "svg": "<path d='M4 21V10a8 8 0 0 1 16 0v11h-4v-9a4 4 0 0 0-8 0v9zM11 2h2v3h-2z'/>"
+ },
+ "sword": {
+  "label": "Sword",
+  "svg": "<path d='M19 2h3v3L10.5 16.5l-3-3zM6.1 14.9l3 3-1.4 1.4-1.3-1.3L4 20.4 2.6 19l2.4-2.4-1.3-1.3z'/>"
+ },
+ "eye": {
+  "label": "Eye",
+  "svg": "<path fill-rule='evenodd' d='M12 5C6.5 5 2.7 9.2 1.5 12c1.2 2.8 5 7 10.5 7s9.3-4.2 10.5-7C21.3 9.2 17.5 5 12 5zm0 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8z'/><circle cx='12' cy='12' r='2'/>"
+ }
+}

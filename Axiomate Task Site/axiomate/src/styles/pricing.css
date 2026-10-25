@@ -1,0 +1,245 @@
+﻿.task-pricing,
+.task-negotiation {
+  border-top: 1px solid #e4ecf7;
+  padding-top: 22px;
+  margin-top: 22px;
+}
+.task-pricing > h3,
+.task-negotiation > h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6888b3;
+  margin-bottom: 18px;
+}
+.task-pricing .form-grid {
+  gap: 0 14px;
+}
+.hourly-estimate {
+  border: 1px solid #dce8f8;
+  background: #f3f7fe;
+  border-radius: 7px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 13px;
+}
+.hourly-estimate > span {
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #9db1ce;
+}
+.hourly-estimate > strong {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #6b92c6;
+}
+.hourly-estimate > small {
+  font-size: 10px;
+  color: #9aadca;
+}
+.pricing-caption {
+  font-size: 10px;
+  line-height: 1.9;
+  color: #9bafcc;
+  margin: 13px 0 19px;
+}
+.pricing-lock-note {
+  border: 1px solid #dfebf9;
+  background: #f5f9ff;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 10px;
+  line-height: 1.8;
+  color: #8fa7c9;
+  margin: 13px 0 20px;
+}
+.task-rate-line {
+  font-size: 10px !important;
+  color: #8ba5c9 !important;
+  margin-bottom: 7px;
+  line-height: 1.7 !important;
+}
+.pending-offer {
+  border: 1px solid #d5e4fa;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 18px 0;
+  background: #f5f9ff;
+}
+.pending-offer > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  margin-bottom: 18px;
+}
+.pending-offer strong {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.7;
+  color: #7796bf;
+}
+.pending-offer .offer-total {
+  font-size: 17px;
+  color: #7499cb;
+  font-weight: 550;
+}
+.pending-offer small {
+  font-size: 9px;
+  color: #a1b4ce;
+}
+.pending-offer p {
+  font-size: 11px;
+  color: #90a7c5;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin-top: 5px;
+}
+.offer-badge {
+  display: inline-block;
+  background: #e7f0fd;
+  border: 1px solid #dce8fa;
+  color: #8aa9d2;
+  border-radius: 4px;
+  font-size: 8px;
+  font-weight: 550;
+  line-height: 1.4;
+  padding: 4px 7px;
+  text-transform: capitalize;
+}
+.offer-accepted {
+  color: #76a38f;
+  background: #e9f6ef;
+  border-color: #d9ecdf;
+}
+.offer-declined {
+  color: #bd8d83;
+  background: #fbeeea;
+  border-color: #f3dfd8;
+}
+.offer-superseded,
+.offer-cancelled {
+  color: #a2afc2;
+  background: #f2f5f9;
+  border-color: #e6ecf5;
+}
+.offer-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.offer-actions .primary,
+.offer-actions .secondary {
+  font-size: 10px;
+  padding: 9px 11px;
+}
+.offer-actions .text-button {
+  font-size: 10px;
+}
+.task-negotiation > .secondary {
+  font-size: 10px;
+  padding: 10px 12px;
+}
+.offer-form {
+  padding: 16px;
+  border: 1px dashed #d2e1f6;
+  background: #f7faff;
+  border-radius: 8px;
+  margin: 18px 0;
+}
+.offer-form label,
+.pending-offer label {
+  font-size: 10px !important;
+  color: #90a9c9 !important;
+}
+.offer-form label > span,
+.pending-offer label > span {
+  font-size: 9px;
+  color: #adbed5;
+}
+.offer-form input,
+.offer-form textarea,
+.pending-offer textarea {
+  font-size: 11px !important;
+}
+.proposed-total {
+  font-size: 11px;
+  color: #9aafcd;
+  margin: 0 0 16px;
+}
+.proposed-total strong {
+  font-size: 14px;
+  color: #85a2c8;
+}
+.negotiation-history {
+  margin-top: 27px;
+}
+.negotiation-history > h4 {
+  font-size: 11px;
+  font-weight: 550;
+  color: #90a7c6;
+  margin: 0 0 14px;
+}
+.negotiation-history article {
+  border-top: 1px solid #e7eef8;
+  padding: 15px 0;
+}
+.negotiation-history article > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.negotiation-history article strong {
+  font-size: 10px;
+  font-weight: 550;
+  color: #91a9c9;
+}
+.negotiation-history article > div > span:last-child {
+  font-size: 11px;
+  color: #8aa6ca;
+  margin-left: auto;
+}
+.negotiation-history small {
+  font-size: 8px;
+  color: #acbdd4;
+  display: block;
+  margin-top: 9px;
+  line-height: 1.8;
+}
+.negotiation-history p {
+  font-size: 10px;
+  line-height: 1.9;
+  color: #9fb2ce;
+  margin: 10px 0 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.negotiation-history .offer-response {
+  border-left: 2px solid #dce7f6;
+  padding-left: 10px;
+}
+@media (max-width: 800px) {
+  .pending-offer,
+  .offer-form {
+    padding: 13px;
+  }
+  .offer-actions .primary,
+  .offer-actions .secondary {
+    font-size: 9px;
+    padding: 8px;
+  }
+  .hourly-estimate > strong {
+    font-size: 23px;
+  }
+  .negotiation-history article > div {
+    gap: 7px;
+  }
+}

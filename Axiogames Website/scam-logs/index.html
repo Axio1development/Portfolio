@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scam Logs | Axiomate Games</title>
+<meta name="description" content="Confirmed scammers with their Roblox usernames and user IDs, plus how to report a scam and check your report.">
+<meta name="theme-color" content="#070810">
+<link rel="canonical" href="https://axiomategames.com/scam-logs">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="icon" href="/assets/brand/mark-256.png" type="image/png" sizes="256x256"><link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Axiomate Games"><meta property="og:title" content="Scam Logs | Axiomate Games"><meta property="og:description" content="Confirmed scammers with their Roblox usernames and user IDs, plus how to report a scam and check your report."><meta property="og:url" content="https://axiomategames.com/scam-logs">
+<meta property="og:image" content="https://axiomategames.com/assets/brand/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Axiomate Games: smooth, fair, fun games for everyone"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://axiomategames.com/assets/brand/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<script src="/assets/theme.js?v=3"></script>
+<link rel="stylesheet" href="/assets/style.css?v=55">
+<script>document.documentElement.classList.add('js')</script>
+
+<link rel="stylesheet" href="/assets/shadow.css?v=4">
+</head>
+<body data-page="scam-logs">
+<div class="fx-noise" aria-hidden="true"></div><div class="fx-scanlines" aria-hidden="true"></div><div class="fx-grid" aria-hidden="true"></div><div class="fx-vignette" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__ring"></span><span class="cursor__dot"></span></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="header"><div class="header__inner">
+  <a class="brand" href="/home" aria-label="Axiomate Games home"><svg class="brand__mark" aria-hidden="true"><use href="/assets/icons.svg#logo"/></svg><span><span class="brand__name" data-shadow="Axiomate">Axiomate</span><span class="brand__sub">Games</span></span></a>
+  <nav class="nav" id="nav" aria-label="Primary"><a href="/home">Home</a><a href="/games">Games</a><a href="/team">Team</a><a href="/contact">Contact</a><a href="/scam-logs" aria-current="page">Scam Logs</a><div class="nav__group"><a href="/others">Others<i class="caret" aria-hidden="true"></i></a><div class="nav__sub"><a href="/others/jobs">Jobs</a><a href="/others/giveaways">Giveaways &amp; Events</a></div></div><a class="nav__hub" href="/hub">Hub &#8599;</a><a class="nav__cta" href="/subscriptions">Subscriptions</a></nav>
+  <div class="header__side"><a class="acct" id="acct" href="/account" aria-label="Account"><i class="acct__dot"></i><span class="acct__t">Sign in</span></a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle light and dark mode"><span class="theme-toggle__i" aria-hidden="true"></span></button></div>
+  <button class="burger" id="burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+</div><div class="header__rail" aria-hidden="true"><i id="headerRail"></i></div></header>
+<main id="main">
+<section class="page-head"><div class="wrap"><p class="section__index">// Scam Logs</p><h1 data-shadow="Scam Logs">Scam Logs</h1><p>Confirmed scammers with their Roblox username, account and user ID, so players can spot them early.</p></div></section>
+<div class="subnav" aria-label="On this page"><div class="subnav__inner"><span class="subnav__label">Scam Logs</span><a href="#log">The Log</a><a href="#report">Report a Scam</a><a href="#status">Check Your Report</a><a href="#process">How It Works</a><a href="#safety">Stay Safe</a></div></div>
+<div class="wrap" style="padding-top:2.4rem"><div class="notice reveal"><b>Heads up</b><span>Only scammers confirmed by our Scam Investigation staff appear here. Reports under review are never shown publicly. Always double-check before you trade.</span></div></div>
+<section class="section" id="log"><div class="wrap">
+  <header class="section__head reveal"><p class="section__index">01</p><h2 class="section__title" data-shadow="The Log">The Log</h2><p class="section__desc">Search by Roblox username, user ID or keyword.</p></header>
+<div class="controls controls--2 reveal"><label>Search<input id="log-search" type="search" placeholder="Roblox username, user ID or keyword"></label><label>Type<select id="log-cat"><option value="">All types</option><option value="fake-trade">Fake trade</option><option value="phishing">Phishing link</option><option value="impersonation">Impersonation</option><option value="payment">Payment scam</option><option value="other">Other</option></select></label></div>
+<p class="count" id="log-count" aria-live="polite">Loading...</p>
+<div class="log-list reveal" id="log-list"></div>
+<div class="empty" id="log-empty" hidden>No confirmed scammers logged yet</div>
+</div></section>
+<div class="divider" aria-hidden="true"><span></span></div>
+<section class="section" id="report"><div class="wrap">
+  <header class="section__head reveal"><p class="section__index">02</p><h2 class="section__title" data-shadow="Report a Scam">Report a Scam</h2><p class="section__desc">You need to be verified: Discord connected and your Roblox account linked.</p></header>
+<div class="form-card reveal form-wide"><div class="gate-slot"></div><form data-api="reports" data-need="verified" data-ok="Report received. Staff will review it." data-after="reports"><label>Scammer's Roblox username<input name="roblox_username" type="text" maxlength="20" placeholder="Their exact Roblox username" required></label><div class="row"><label>Type<select name="type"><option value="fake-trade">Fake trade</option><option value="phishing">Phishing link</option><option value="impersonation">Impersonation</option><option value="payment">Payment scam</option><option value="other">Other</option></select></label><label>Their Discord ID (optional)<input name="discord_id" type="text" inputmode="numeric" maxlength="25" placeholder="If you know it"></label></div><label>What happened<textarea name="description" maxlength="4000" placeholder="Describe what happened, in order (at least 20 characters)" required></textarea></label><label>Evidence links<input name="evidence" type="text" maxlength="1000" placeholder="Links to screenshots or recordings"></label><label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label><button class="btn btn--primary" type="submit"><span>Submit Report</span><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#arrow"/></svg></button><div class="form-status" role="status" hidden></div></form></div>
+</div></section>
+<div class="divider" aria-hidden="true"><span></span></div>
+<section class="section" id="status"><div class="wrap">
+  <header class="section__head reveal"><p class="section__index">03</p><h2 class="section__title" data-shadow="Check Your Report">Check Your Report</h2><p class="section__desc">Sign in to see the status of every report you submitted. You can also run /report-status with the Axio Community Bot in our Discord server.</p></header>
+<div class="reveal" id="my-reports"></div>
+</div></section>
+<div class="divider" aria-hidden="true"><span></span></div>
+<section class="section" id="process"><div class="wrap">
+  <header class="section__head reveal"><p class="section__index">04</p><h2 class="section__title" data-shadow="How It Works">How It Works</h2><p class="section__desc">Every report follows the same steps so the log stays fair and accurate.</p></header>
+<div class="cards reveal"><article class="card"><p class="card__id">STEP 01</p><h3>Submit</h3><p>A verified member reports a Roblox user with as much evidence as possible.</p></article><article class="card"><p class="card__id">STEP 02</p><h3>Investigate</h3><p>Scam Investigation staff review the evidence and look for matching reports.</p></article><article class="card"><p class="card__id">STEP 03</p><h3>Confirm</h3><p>Only confirmed scammers are published, with their Roblox username and user ID.</p></article><article class="card"><p class="card__id">STEP 04</p><h3>Appeal</h3><p>If someone is listed in error, they can open a ticket in Discord to appeal.</p></article></div>
+</div></section>
+<div class="divider" aria-hidden="true"><span></span></div>
+<section class="section" id="safety"><div class="wrap">
+  <header class="section__head reveal"><p class="section__index">05</p><h2 class="section__title" data-shadow="Stay Safe">Stay Safe</h2><p class="section__desc">Simple habits that stop most scams before they start.</p></header>
+<div class="cards reveal"><article class="card"><p class="card__id">TIP 01</p><h3>Never share your login</h3><p>Staff will never ask for your password or login codes.</p></article><article class="card"><p class="card__id">TIP 02</p><h3>Check the link</h3><p>Look closely at the address before you sign in. Fake sites copy the real ones.</p></article><article class="card"><p class="card__id">TIP 03</p><h3>Be wary of rushing</h3><p>Scammers create urgency. Take your time and ask questions.</p></article><article class="card"><p class="card__id">TIP 04</p><h3>Keep proof</h3><p>Save screenshots of every deal. They matter if something goes wrong.</p></article><article class="card"><p class="card__id">TIP 05</p><h3>Check the log</h3><p>Search a username here before you trade with someone new.</p></article></div>
+</div></section>
+<div class="divider" aria-hidden="true"><span></span></div>
+<section class="section" style="padding-top:0"><div class="wrap"><div class="cta reveal"><div class="brackets" aria-hidden="true"></div><h2 data-shadow="Got a scam to report?">Got a scam to report?</h2><p>Every report helps keep the community safer.</p><a class="btn btn--primary" href="#report"><span>Report a Scam</span><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#arrow"/></svg></a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap footer__inner">
+  <div class="footer__brand"><svg aria-hidden="true"><use href="/assets/icons.svg#logo"/></svg><span>Axiomate Games</span></div>
+  <p class="footer__copy">&copy; <span id="year">2026</span> Axiomate Games. All rights reserved.</p>
+  <nav class="footer__links" aria-label="Footer"><a class="footer__link" href="/games">Games</a><a class="footer__link" href="/team">Team</a><a class="footer__link" href="/scam-logs">Scam Logs</a><a class="footer__link" href="/others/jobs">Jobs</a><a class="footer__link" href="/others/giveaways">Giveaways</a><a class="footer__link" href="/subscriptions">Subscriptions</a><a class="footer__link" href="/contact">Contact</a><a class="footer__link" href="/account">Account</a><button class="footer__link" type="button" data-modal="privacy">Privacy</button></nav>
+</div></footer>
+<div class="modal" id="modal" hidden><div class="modal__backdrop" data-close></div><div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><header class="modal__head"><h3 id="modalTitle">Privacy</h3><button class="modal__close" type="button" data-close aria-label="Close">&times;</button></header><div class="modal__body" id="modalBody"></div></div></div>
+<button class="totop" id="toTop" type="button" aria-label="Back to top">&uarr;</button>
+<script src="/assets/site.js?v=9" defer></script>
+<script src="/assets/app.js?v=20" defer></script>
+<script src="/assets/cursor.js?v=1" defer></script>
+</body></html>

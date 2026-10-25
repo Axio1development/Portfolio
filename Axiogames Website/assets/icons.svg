@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<symbol id="logo" viewBox="0 0 32 32"><rect x="1.5" y="1.5" width="29" height="29" rx="3" fill="#000" stroke="#fff" stroke-width="1.5"/><path d="M9 23L16 8l7 15M12 18h8" stroke="#fff" stroke-width="2.4" stroke-linecap="square" stroke-linejoin="miter" fill="none"/></symbol>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></symbol>
+<symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="gamepad" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="11" rx="5.5"/><path d="M7 10.5v4M5 12.5h4"/><circle cx="15.5" cy="11.5" r="1" fill="currentColor"/><circle cx="18" cy="14" r="1" fill="currentColor"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+</svg>

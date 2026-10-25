@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b2545">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700;800&display=swap" rel="stylesheet">
+  <script src="/assets/js/theme.js"></script>
+  <link rel="stylesheet" href="/assets/css/base.css?v=1">
+  <link rel="stylesheet" href="/assets/css/site.css?v=1">
+  <title>Open an account — Axiomate Bank</title>
+</head>
+<body data-page="auth">
+  <div class="auth">
+    <aside class="auth-aside">
+      <a class="brand" href="/"><img src="/assets/img/logo.svg" alt="">Axiomate</a>
+      <div>
+        <h2>Open your accounts in under two minutes.</h2>
+        <p>You'll get everything at once, ready to explore.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Everyday Checking with a debit card</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> High-Yield Savings at 4.10% APY (illustrative)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Axiomate Rewards Card with an $8,000 limit</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Six months of sample history to explore</li>
+        </ul>
+      </div>
+      <p class="fine">Concept project. Axiomate Bank is not a real bank and is not FDIC insured. No real money moves.</p>
+    </aside>
+    <main class="auth-main">
+      <div class="top">
+        <a class="brand" href="/"><img src="/assets/img/logo.svg" alt="">Axiomate</a>
+        <span class="muted" style="font-size:14px">Have an account? <a href="/login">Sign in</a></span>
+      </div>
+      <form class="auth-form" id="signup-form" novalidate>
+        <h1>Open an account</h1>
+        <p class="sub">No Social Security number, no credit check. This is a concept bank.</p>
+        <div class="form-error" role="alert"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex:none;margin-top:1px"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><span></span></div>
+        <div class="row2">
+          <div class="field"><label for="first_name">First name</label><input class="input" id="first_name" name="first_name" autocomplete="given-name" required maxlength="40"></div>
+          <div class="field"><label for="last_name">Last name</label><input class="input" id="last_name" name="last_name" autocomplete="family-name" required maxlength="40"></div>
+        </div>
+        <div class="field"><label for="email">Email</label><input class="input" id="email" name="email" type="email" autocomplete="email" required maxlength="120"></div>
+        <div class="field">
+          <label for="password">Create password</label>
+          <div class="pw-wrap">
+            <input class="input" id="password" name="password" type="password" autocomplete="new-password" required minlength="10" maxlength="128">
+            <button class="pw-toggle" type="button" aria-label="Show password" aria-pressed="false">Show</button>
+          </div>
+          <div class="meter" data-s="0" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <span class="hint" data-meter-text aria-live="polite">At least 10 characters, with a letter and a number.</span>
+        </div>
+        <div class="field"><label for="confirm">Confirm password</label><input class="input" id="confirm" name="confirm" type="password" autocomplete="new-password" required></div>
+        <label class="check" style="margin:4px 0 22px"><input type="checkbox" name="accept"> <span>I understand Axiomate Bank is a concept, not a real bank, and I won't enter real financial information. I agree to the <a href="/legal#terms" target="_blank">Terms</a> and <a href="/legal#privacy" target="_blank">Privacy notice</a>.</span></label>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Open my accounts</button>
+      </form>
+    </main>
+  </div>
+  <script src="/assets/js/site.js?v=1"></script>
+</body>
+</html>

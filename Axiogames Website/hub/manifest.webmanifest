@@ -1,0 +1,21 @@
+{
+  "name": "Axiomate Hub",
+  "short_name": "Axiomate",
+  "description": "Chat with the Axiomate Games community, open and track tickets, and link your Roblox account.",
+  "id": "/hub",
+  "start_url": "/hub",
+  "scope": "/hub",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#070810",
+  "theme_color": "#070810",
+  "shortcuts": [
+    { "name": "Friends & messages", "short_name": "Friends", "url": "/hub?section=home", "description": "Open your community overview and direct messages" },
+    { "name": "Support tickets", "short_name": "Support", "url": "/hub?section=tickets", "description": "View and manage your support tickets" },
+    { "name": "Roblox account", "short_name": "Roblox", "url": "/hub?section=roblox", "description": "Manage your linked Roblox account" }
+  ],
+  "icons": [
+    { "src": "/hub/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/hub/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

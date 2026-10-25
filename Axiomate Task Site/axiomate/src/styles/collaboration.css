@@ -1,0 +1,530 @@
+.team-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.team-layout .error {
+  margin: 0;
+}
+.collaboration-caption {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #8498b4;
+  margin: 16px 0;
+}
+.invite-form {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr auto;
+  gap: 14px;
+  align-items: end;
+  margin-top: 22px;
+}
+.invite-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 11px;
+  color: #7890b0;
+}
+.invite-form input,
+.invite-form select {
+  width: 100%;
+  font-size: 12px;
+  min-width: 0;
+}
+.invite-form .primary {
+  padding: 11px 14px;
+  font-size: 11px;
+  min-height: 40px;
+}
+.invite-help {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-size: 10px;
+  line-height: 1.9;
+  color: #98aac2;
+  margin-top: 17px;
+}
+.invite-help svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.invite-link {
+  padding: 17px;
+  border: 1px solid #dce8f9;
+  background: #f2f7ff;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.invite-link > strong {
+  font-size: 11px;
+  font-weight: 600;
+  color: #658abf;
+}
+.invite-link > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+.invite-link input {
+  flex: 1;
+  min-width: 0;
+  font-size: 10px;
+  color: #829bbc;
+  background: #fff;
+}
+.invite-link .secondary {
+  font-size: 10px;
+  padding: 10px;
+}
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #eaf0f7;
+  padding: 20px 0;
+}
+.team-member:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.team-member > div {
+  min-width: 0;
+  flex: 1;
+}
+.team-member strong {
+  font-size: 12px;
+  font-weight: 550;
+}
+.team-member small {
+  display: block;
+  font-size: 10px;
+  color: #9aadc7;
+  margin-top: 6px;
+  overflow-wrap: anywhere;
+}
+.role-badge {
+  display: inline-block;
+  font-size: 9px;
+  padding: 5px 7px;
+  border-radius: 5px;
+  background: #edf3fc;
+  color: #7696c3;
+  white-space: nowrap;
+}
+.role-tester {
+  background: #e8f5f1;
+  color: #6a9c90;
+}
+.role-voice_actor {
+  background: #f3edfc;
+  color: #a08abd;
+}
+.role-workspace_owner {
+  background: #edf0f6;
+  color: #7f92ae;
+}
+.remove-member {
+  font-size: 10px;
+  color: #bd8279;
+  padding: 5px;
+}
+.pending-invites > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid #eaf0f7;
+  padding: 18px 0;
+}
+.pending-invites > div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.pending-invites strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #8098b8;
+  overflow-wrap: anywhere;
+}
+.pending-invites small {
+  display: block;
+  font-size: 9px;
+  color: #a3b3c9;
+  margin-top: 7px;
+}
+.task-submissions {
+  border-top: 1px solid #e5edf7;
+  padding-top: 22px;
+  margin-top: 25px;
+}
+.task-submissions > h3 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 17px;
+}
+.task-submissions > h3 > span {
+  margin-left: auto;
+  font-size: 10px;
+  color: #98aecb;
+  font-weight: 400;
+}
+.submission-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.submission-list article {
+  border: 1px solid #e4ecf7;
+  border-radius: 7px;
+  padding: 12px;
+  background: #f9fbff;
+}
+.submission-list article > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.submission-file-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 35px;
+  border: 1px solid #e0eaf7;
+  border-radius: 5px;
+  background: #f0f5fd;
+  color: #8aa8d0;
+  flex-shrink: 0;
+}
+.submission-list article > div:first-child > div {
+  min-width: 0;
+  flex: 1;
+}
+.submission-list a {
+  font-size: 11px;
+  color: #658fc7;
+  overflow-wrap: anywhere;
+}
+.submission-list small {
+  font-size: 8px;
+  color: #a1b3cc;
+  display: block;
+  line-height: 1.8;
+  margin-top: 5px;
+}
+.submission-list article > p {
+  font-size: 11px;
+  color: #95a9c5;
+  line-height: 1.8;
+  margin: 12px 0 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.download-file {
+  display: flex;
+  padding: 5px;
+  flex-shrink: 0;
+}
+.submission-upload {
+  margin-top: 18px;
+  padding: 17px;
+  border: 1px dashed #d5e2f5;
+  border-radius: 8px;
+  background: #f7faff;
+}
+.submission-upload label {
+  font-size: 10px !important;
+  color: #8ca4c6 !important;
+  margin-bottom: 12px !important;
+}
+.submission-upload input[type="file"] {
+  font-size: 10px;
+  padding: 9px;
+  max-width: 100%;
+  background: #fff;
+}
+.submission-upload > small {
+  display: block;
+  font-size: 9px;
+  color: #a2b5cf;
+  line-height: 1.8;
+  margin-bottom: 17px;
+}
+.submission-upload .secondary {
+  font-size: 10px;
+  padding: 10px 12px;
+}
+.submission-upload label span {
+  font-size: 9px;
+  color: #acbbd1;
+}
+.submission-access {
+  font-size: 10px;
+  line-height: 1.8;
+  color: #a5b6ce;
+  margin-top: 17px;
+}
+.submission-success {
+  color: #5b9c88;
+  font-size: 11px;
+  line-height: 1.8;
+  margin-top: 15px;
+}
+.task-modal input:disabled,
+.task-modal select:disabled,
+.task-modal textarea:disabled {
+  opacity: 1;
+  background: #f6f8fc;
+  color: #8a9ebc;
+  border-color: #e3eaf4;
+  cursor: default;
+}
+.task-modal input[type="checkbox"]:disabled {
+  opacity: 0.5;
+}
+.invite-accept > h2 {
+  font-size: 21px;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+}
+.invite-accept > p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #8aa0bd;
+  margin: 19px 0;
+}
+.invite-accept > p strong {
+  color: #7294c1;
+  font-weight: 550;
+}
+.invite-accept .primary {
+  width: 100%;
+  margin: 5px 0 15px;
+}
+.invite-accept .text-button {
+  margin: 20px auto 0;
+}
+.invitation-signin-note {
+  background: #eff5ff;
+  border: 1px solid #dce8f9;
+  padding: 13px;
+  border-radius: 7px;
+  margin: 0 0 22px;
+  font-size: 11px;
+  line-height: 1.9;
+  color: #8ca5c9;
+}
+.invitation-signin-note strong {
+  font-weight: 600;
+  color: #6189c0;
+}
+@media (max-width: 1100px) {
+  .invite-form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .invite-form .primary {
+    grid-column: 1/-1;
+    justify-self: start;
+  }
+}
+@media (max-width: 800px) {
+  .invite-form {
+    grid-template-columns: 1fr;
+  }
+  .invite-form .primary {
+    justify-self: stretch;
+  }
+  .team-member {
+    gap: 9px;
+    flex-wrap: wrap;
+  }
+  .team-member > div {
+    flex-basis: calc(100% - 50px);
+  }
+  .team-member > .role-badge {
+    margin-left: 36px;
+  }
+  .team-member > .remove-member {
+    margin-left: auto;
+  }
+  .invite-link > div {
+    flex-wrap: wrap;
+  }
+  .invite-link input {
+    flex-basis: 100%;
+  }
+  .collaboration-caption {
+    font-size: 11px;
+  }
+  .invite-panel .section-title {
+    align-items: flex-start;
+  }
+  .invite-panel .section-title .pill {
+    font-size: 8px;
+  }
+  .submission-list article > div:first-child {
+    gap: 7px;
+  }
+  .submission-upload {
+    padding: 13px;
+  }
+}
+.member-rank-select {
+  max-width: 165px;
+  font-size: 10px;
+  padding: 7px 10px;
+  color: #7b97bd;
+  border-color: #dfe8f6;
+  background: #f6f9fe;
+}
+.role-studio_director {
+  background: #f0eafb;
+  color: #9677bd;
+}
+.role-studio_owner,
+.role-workspace_owner {
+  background: #e9effb;
+  color: #6c8bbd;
+}
+.review-result {
+  margin-top: 13px;
+  border-top: 1px solid #e4ecf7;
+  padding-top: 12px;
+}
+.review-status {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 4px 7px;
+  border-radius: 4px;
+  color: #7996bd;
+  background: #eaf1fc;
+}
+.review-approved .review-status {
+  color: #5e9a84;
+  background: #e5f4ed;
+}
+.review-denied .review-status {
+  color: #b37b71;
+  background: #fbedeb;
+}
+.review-changes_requested .review-status {
+  color: #b29a63;
+  background: #fbf3e0;
+}
+.review-result > small {
+  display: block !important;
+  margin-top: 8px !important;
+  font-size: 9px !important;
+  color: #9aacbf !important;
+}
+.review-result > p {
+  font-size: 11px;
+  color: #8197b4;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  margin-top: 9px;
+  overflow-wrap: anywhere;
+}
+.submission-review {
+  padding: 15px;
+  border: 1px solid #dce7f6;
+  border-radius: 7px;
+  background: white;
+  margin-top: 16px;
+}
+.submission-review h4 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6f8db5;
+  margin: 0 0 8px;
+}
+.submission-review > p {
+  font-size: 10px !important;
+  color: #9caec7 !important;
+  line-height: 1.8 !important;
+  margin: 0 0 14px !important;
+}
+.review-options {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.review-options button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 9px;
+  border: 1px solid #e2eaf6;
+  border-radius: 5px;
+  font-size: 9px;
+  color: #91a6c4;
+  background: #f8faff;
+}
+.review-options .selected.approved {
+  border-color: #b8ddce;
+  background: #ecf8f2;
+  color: #6b9e88;
+}
+.review-options .selected.changes {
+  border-color: #e8d7ad;
+  background: #fdf6e6;
+  color: #b29a69;
+}
+.review-options .selected.denied {
+  border-color: #edc8c1;
+  background: #fdf0ee;
+  color: #b77b70;
+}
+.submission-review label {
+  font-size: 10px !important;
+  color: #8ba1bf !important;
+  margin-bottom: 12px !important;
+}
+.submission-review label > span {
+  font-size: 9px;
+  color: #acbbcf;
+}
+.submission-review textarea {
+  min-height: 80px !important;
+  font-size: 11px !important;
+}
+.submission-review > .primary {
+  font-size: 10px;
+  padding: 9px 12px;
+}
+.review-completion-hint {
+  font-size: 10px;
+  color: #90a6c5;
+  line-height: 1.8;
+  padding: 11px;
+  border: 1px solid #e1eaf7;
+  background: #f5f9ff;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+@media (max-width: 800px) {
+  .member-rank-select {
+    margin-left: 36px;
+    max-width: 170px;
+    font-size: 9px;
+  }
+  .review-options {
+    gap: 5px;
+  }
+  .review-options button {
+    padding: 7px;
+    font-size: 9px;
+  }
+  .submission-review {
+    padding: 12px;
+  }
+}

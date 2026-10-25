@@ -1,0 +1,28 @@
+{
+  "name": "axiomate-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build && node tools/package-server.mjs",
+    "check": "tsc --noEmit",
+    "format": "prettier --write src tools/*.mjs tests/*.mjs *.ts *.json index.html",
+    "test:api": "python tests/access.py && python tests/migration.py && python tests/collaboration.py && python tests/boards_migration.py && python tests/boards_time.py && python tests/hourly.py && python tests/task_clock.py && python tests/task_clock_migration.py && python tests/references.py",
+    "test:browser": "node tests/browser.mjs && node tests/browser-collaboration.mjs && node tests/browser-boards-time.mjs && node tests/browser-hourly.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^1.31.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "^5.2.0",
+    "prettier": "^3.9.10",
+    "typescript": "5.9.3",
+    "vite": "^7.3.7"
+  }
+}

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Learn automotive systems across beginner, intermediate and advanced courses. Interactive lessons, student grades and teacher classrooms at Axiomate."
+    />
+    <meta name="theme-color" content="#101d2e" />
+    <title>Axiomate — Automotive Academy</title>
+    <link rel="icon" href="/assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/style.css?v=6" />
+    <link rel="stylesheet" href="/assets/academy.css?v=6" />
+    <script src="/assets/diagrams.js?v=6" defer></script>
+    <script src="/assets/topics.js?v=6" defer></script>
+    <script src="/assets/app.js?v=6" defer></script>
+  </head>
+  <body>
+    <div id="app"><div class="loading">Starting your workshop…</div></div>
+    <dialog id="auth">
+      <form id="auth-form" novalidate>
+        <button type="button" class="close" aria-label="Close sign in">×</button
+        ><span class="eyebrow" id="auth-step-label">YOUR WORKSPACE</span>
+        <h2 id="auth-title">Welcome back.</h2>
+        <p id="auth-copy">Sign in to your student or teacher workspace.</p>
+        <div id="role-step" hidden>
+          <label class="role-option"
+            ><input type="radio" name="role" value="student" checked /><span
+              ><strong>I’m a student</strong
+              ><small>Take courses, join classes and earn grades.</small></span
+            ></label
+          ><label class="role-option"
+            ><input type="radio" name="role" value="teacher" /><span
+              ><strong>I’m a teacher</strong
+              ><small
+                >Create courses, manage classes and review student
+                grades.</small
+              ></span
+            ></label
+          >
+        </div>
+        <div id="details-step">
+          <label id="name-field" hidden
+            >Your name<input
+              name="name"
+              autocomplete="name"
+              maxlength="80"
+              minlength="2" /></label
+          ><label
+            >Email address<input
+              type="email"
+              name="email"
+              autocomplete="email"
+              required
+              maxlength="254" /></label
+          ><label
+            >Password<input
+              type="password"
+              name="password"
+              autocomplete="current-password"
+              required
+              maxlength="256"
+          /></label>
+        </div>
+        <div id="school-step" hidden>
+          <label
+            >School / institution name<input
+              name="school"
+              required
+              minlength="3"
+              maxlength="160"
+              autocomplete="organization" /></label
+          ><label
+            >School city / region<input
+              name="location"
+              required
+              minlength="2"
+              maxlength="160"
+              placeholder="e.g. Phoenix, Arizona" /></label
+          ><label
+            >Department / program<input
+              name="department"
+              required
+              minlength="2"
+              maxlength="120"
+              placeholder="e.g. Automotive Technology" /></label
+          ><label
+            >Your teaching role<input
+              name="job_title"
+              required
+              minlength="2"
+              maxlength="100"
+              placeholder="e.g. Automotive Instructor"
+              autocomplete="organization-title" /></label
+          ><label
+            >School website (optional)<input
+              type="url"
+              name="school_website"
+              maxlength="250"
+              placeholder="https://yourschool.edu" /></label
+          ><label class="checkbox-label"
+            ><input
+              type="checkbox"
+              name="school_confirm"
+              value="yes"
+              required
+            />I’m authorized to teach at this school.</label
+          >
+        </div>
+        <p id="auth-error" role="alert"></p>
+        <button class="primary" id="auth-submit">Sign in</button
+        ><button type="button" class="text-button" id="auth-back" hidden>
+          ← Previous step</button
+        ><button type="button" class="text-button" id="auth-toggle">
+          New here? Create an account
+        </button>
+      </form>
+    </dialog>
+    <div id="toast" role="status"></div>
+    <noscript>This interactive academy needs JavaScript enabled.</noscript>
+  </body>
+</html>

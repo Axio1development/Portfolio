@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Axiomate Trading — Simulated Market</title>
+    <meta
+      name="description"
+      content="Axiomate Trading is a realistic market simulator. Trade fictional stocks, crypto and gold with virtual cash: live order book, pro charts, limit/stop orders, shorting, margin and AI rivals."
+    />
+    <meta name="theme-color" content="#070a10" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0f17'/%3E%3Crect x='6' y='12' width='4' height='12' fill='%2316c784'/%3E%3Crect x='14' y='6' width='4' height='14' fill='%23ea3943'/%3E%3Crect x='22' y='9' width='4' height='16' fill='%2316c784'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=2" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+          <rect width="32" height="32" rx="7" fill="#131a27" />
+          <rect x="6" y="12" width="4" height="12" fill="#16c784" />
+          <rect x="7.5" y="9" width="1" height="18" fill="#16c784" />
+          <rect x="14" y="6" width="4" height="14" fill="#ea3943" />
+          <rect x="15.5" y="4" width="1" height="19" fill="#ea3943" />
+          <rect x="22" y="9" width="4" height="16" fill="#16c784" />
+          <rect x="23.5" y="6" width="1" height="21" fill="#16c784" />
+        </svg>
+        <div>
+          <div class="brand-name">Axiomate <span>Trading</span></div>
+          <div class="brand-sub">Simulated exchange · virtual funds</div>
+        </div>
+      </div>
+      <div class="mkt-status" id="mkt-status">
+        <span class="live" id="live-dot"><i></i><b>OPEN</b></span>
+        <div>
+          <div id="clock" class="mono">—</div>
+          <div id="clock-sub" class="small muted">—</div>
+        </div>
+      </div>
+      <button
+        class="index-chip"
+        id="index-chip"
+        title="View the AX50 index ETF"
+      >
+        <span class="muted small">AX50</span><b id="idx-px" class="mono">—</b
+        ><span id="idx-chg" class="mono small">—</span>
+      </button>
+      <div class="stats">
+        <div class="stat">
+          <label>Equity</label><b id="st-equity" class="mono">—</b>
+        </div>
+        <div class="stat">
+          <label>Day P&amp;L</label><b id="st-day" class="mono">—</b>
+        </div>
+        <div class="stat">
+          <label>Open P&amp;L</label><b id="st-upnl" class="mono">—</b>
+        </div>
+        <div class="stat">
+          <label>Buying power</label><b id="st-bp" class="mono">—</b>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="seg" id="speed" role="group" aria-label="Simulation speed">
+          <button data-speed="0" title="Pause (Space)">❚❚</button>
+          <button data-speed="1" class="on">1×</button>
+          <button data-speed="4">4×</button>
+          <button data-speed="16">16×</button>
+          <button data-speed="60">60×</button>
+        </div>
+        <button class="ghost icon" id="btn-help" title="How it works">?</button>
+        <button class="ghost" id="btn-reset" title="Start over with $100,000">
+          Reset
+        </button>
+      </div>
+    </header>
+
+    <div class="margin-banner" id="margin-banner" hidden></div>
+
+    <main class="layout">
+      <aside class="panel watch">
+        <div class="panel-head">
+          <h2>Markets</h2>
+          <input
+            id="wl-search"
+            type="search"
+            placeholder="Search"
+            aria-label="Search markets"
+            autocomplete="off"
+          />
+        </div>
+        <div class="chips" id="wl-chips"></div>
+        <div class="wl-cols small muted">
+          <span>Symbol</span><span>Last</span><span>Chg%</span>
+        </div>
+        <ul id="watchlist"></ul>
+      </aside>
+
+      <aside class="panel news">
+        <div class="panel-head">
+          <h2>Market wire</h2>
+          <span class="muted small" id="news-count"></span>
+        </div>
+        <ul id="newsfeed"></ul>
+      </aside>
+      <section class="panel chart-panel">
+        <div class="chart-head">
+          <div class="sym-block">
+            <div class="sym-line">
+              <b id="c-sym">—</b><span id="c-name" class="muted">—</span
+              ><span class="badge" id="c-sector">—</span>
+            </div>
+            <div class="px-line">
+              <span id="c-price" class="mono big">—</span
+              ><span id="c-chg" class="mono chg">—</span>
+            </div>
+          </div>
+          <dl class="fund" id="fund"></dl>
+        </div>
+        <div class="toolbar">
+          <div
+            class="seg small-seg"
+            id="tf"
+            role="group"
+            aria-label="Timeframe"
+          >
+            <button data-tf="1m">1m</button
+            ><button data-tf="5m" class="on">5m</button
+            ><button data-tf="15m">15m</button><button data-tf="1h">1H</button
+            ><button data-tf="1D">1D</button>
+          </div>
+          <div
+            class="seg small-seg"
+            id="ctype"
+            role="group"
+            aria-label="Chart type"
+          >
+            <button data-type="candle" class="on" title="Candles">
+              Candles</button
+            ><button data-type="line" title="Line">Line</button
+            ><button data-type="area" title="Area">Area</button>
+          </div>
+          <div class="toggles" id="ind">
+            <button data-ind="ma20" class="on" style="--c: #f0b90b">
+              MA20
+            </button>
+            <button data-ind="ma50" style="--c: #a78bfa">MA50</button>
+            <button data-ind="bb" style="--c: #38bdf8">BB</button>
+            <button data-ind="vwap" style="--c: #f472b6">VWAP</button>
+            <button data-ind="vol" class="on" style="--c: #7d8aa3">Vol</button>
+          </div>
+          <div
+            class="seg small-seg"
+            id="lower"
+            role="group"
+            aria-label="Lower pane"
+          >
+            <button data-lower="none">—</button
+            ><button data-lower="rsi" class="on">RSI</button
+            ><button data-lower="macd">MACD</button>
+          </div>
+        </div>
+        <div class="chart-wrap" id="chart-wrap">
+          <canvas id="chart"></canvas>
+          <button class="latest" id="go-latest" hidden>Latest ⟶</button>
+        </div>
+      </section>
+
+      <section class="panel bottom">
+        <div class="tabs" id="btabs">
+          <button data-tab="positions" class="on">
+            Positions <span class="pill" id="pos-count">0</span>
+          </button>
+          <button data-tab="orders">
+            Orders <span class="pill" id="ord-count">0</span>
+          </button>
+          <button data-tab="history">History</button>
+          <button data-tab="portfolio">Portfolio</button>
+          <button data-tab="leaders">Leaderboard</button>
+        </div>
+        <div class="tab-body" id="tab-body"></div>
+      </section>
+      <aside class="side">
+        <div class="panel ticket">
+          <div class="tabs bs" id="side-tabs">
+            <button data-side="buy" class="on buy">Buy</button>
+            <button data-side="sell" class="sell">Sell / Short</button>
+          </div>
+          <div class="ticket-body">
+            <div class="quote mono">
+              <button id="q-bid" title="Use bid as price">
+                <label>Bid</label><span>—</span><small>—</small>
+              </button>
+              <div class="spread">
+                <label>Spread</label><span id="q-spread">—</span>
+              </div>
+              <button id="q-ask" title="Use ask as price">
+                <label>Ask</label><span>—</span><small>—</small>
+              </button>
+            </div>
+            <div class="seg full" id="otype">
+              <button data-type="market" class="on">Market</button>
+              <button data-type="limit">Limit</button>
+              <button data-type="stop">Stop</button>
+            </div>
+            <div class="field" id="px-field" hidden>
+              <label for="t-px" id="t-px-l">Limit price</label>
+              <input
+                id="t-px"
+                type="number"
+                step="0.01"
+                min="0"
+                inputmode="decimal"
+              />
+            </div>
+            <div class="field">
+              <label for="t-qty"
+                ><span id="t-qty-l">Quantity</span
+                ><span class="muted" id="t-notional"></span
+              ></label>
+              <div class="qty-row">
+                <button class="ghost" id="qty-minus" aria-label="Decrease">
+                  −
+                </button>
+                <input
+                  id="t-qty"
+                  type="number"
+                  min="0"
+                  step="1"
+                  value="10"
+                  inputmode="decimal"
+                />
+                <button class="ghost" id="qty-plus" aria-label="Increase">
+                  +
+                </button>
+              </div>
+              <div class="pcts" id="pcts">
+                <button data-p="0.1">10%</button
+                ><button data-p="0.25">25%</button
+                ><button data-p="0.5">50%</button
+                ><button data-p="1">Max</button>
+              </div>
+            </div>
+            <div class="field" id="tif-field" hidden>
+              <label>Time in force</label>
+              <div class="seg full" id="tif">
+                <button data-tif="day" class="on">Day</button
+                ><button data-tif="gtc">Good 'til cancel</button>
+              </div>
+            </div>
+            <details class="bracket" id="bracket">
+              <summary>Take profit / Stop loss</summary>
+              <div class="br-row">
+                <label><input type="checkbox" id="tp-on" /> Take profit</label>
+                <input
+                  id="tp-px"
+                  type="number"
+                  step="0.01"
+                  inputmode="decimal"
+                  placeholder="Price"
+                />
+              </div>
+              <div class="br-row">
+                <label><input type="checkbox" id="sl-on" /> Stop loss</label>
+                <input
+                  id="sl-px"
+                  type="number"
+                  step="0.01"
+                  inputmode="decimal"
+                  placeholder="Price"
+                />
+              </div>
+            </details>
+            <div class="summary mono small" id="summary"></div>
+            <button class="submit buy" id="t-submit">Buy</button>
+            <p class="err small" id="t-err" role="alert"></p>
+            <div class="pos-card" id="pos-card" hidden></div>
+          </div>
+        </div>
+
+        <div class="panel book">
+          <div class="tabs" id="book-tabs">
+            <button data-bt="book" class="on">Order book</button>
+            <button data-bt="trades">Trades</button>
+          </div>
+          <div class="book-body" id="book-body"></div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="foot">
+      <span
+        >Axiomate Trading is a <b>simulation / game</b>. Every company, price
+        and headline is randomly generated. No real money or securities are
+        involved.</span
+      >
+      <span class="keys"
+        >Shortcuts: <kbd>B</kbd>/<kbd>S</kbd> side · <kbd>1</kbd>–<kbd>5</kbd>
+        timeframe · <kbd>↑</kbd>/<kbd>↓</kbd> symbol ·
+        <kbd>Space</kbd> pause</span
+      >
+    </footer>
+
+    <div class="modal" id="help" hidden>
+      <div
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="help-title"
+      >
+        <h2 id="help-title">Welcome to Axiomate Trading</h2>
+        <p>
+          A realistic stock-market simulator. You start with <b>$100,000</b> in
+          virtual cash. Every company, price and headline is made up.
+        </p>
+        <ul>
+          <li>
+            <b>The market runs on a clock.</b> Each trading day goes 9:30 to
+            16:00. At 1× speed a full day takes about 20 minutes, and you can
+            speed it up to 60×. Overnight, prices can <i>gap</i> up or down.
+          </li>
+          <li>
+            <b>Prices move together.</b> Stocks follow the overall market and
+            their sector, then react to their own news. Volatility comes in
+            bursts.
+          </li>
+          <li>
+            <b>Earnings days</b> (shown under each stock) can move a stock 5–15%
+            at the open.
+          </li>
+          <li>
+            <b>Market orders</b> fill against the order book. Big orders eat
+            through several price levels, so you pay <i>slippage</i>.
+          </li>
+          <li>
+            <b>Limit</b> orders wait for your price. <b>Stop</b> orders trigger
+            a market order when the price breaks through. Add a take-profit or
+            stop-loss to any entry.
+          </li>
+          <li>
+            <b>Short selling and 2× margin</b> are allowed. If your equity falls
+            below 25% of your positions' value, you get a margin call and
+            positions are closed automatically.
+          </li>
+          <li>
+            Commission is $0.005/share (min $1) for stocks and 0.10% for crypto.
+          </li>
+          <li>
+            Six AI traders run their own strategies in the same market. Try to
+            beat them on the <b>Leaderboard</b>.
+          </li>
+        </ul>
+        <button class="submit buy" id="help-close">Start trading</button>
+      </div>
+    </div>
+
+    <div class="toasts" id="toasts" aria-live="polite"></div>
+    <script src="engine.js?v=2"></script>
+    <script src="chart.js?v=2"></script>
+    <script src="app.js?v=2"></script>
+  </body>
+</html>

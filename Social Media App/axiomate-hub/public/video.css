@@ -1,0 +1,139 @@
+.video-picker {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 31px;
+  height: 31px;
+  margin: 0 !important;
+  color: #b494d6;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.video-picker:hover {
+  background: #2e2141;
+}
+.video-picker:focus-within {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+}
+.video-picker input {
+  position: absolute;
+  width: 1px !important;
+  height: 1px;
+  opacity: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.video-hint {
+  font-size: 10px;
+  color: #9b87ad;
+  margin: 0 0 12px;
+}
+.video-draft {
+  border: 1px solid #483254;
+  border-radius: 11px;
+  background: #140f1c;
+  overflow: hidden;
+  margin: 12px 0 17px;
+}
+.video-draft video {
+  display: block;
+  width: 100%;
+  max-height: 340px;
+  background: #050507;
+}
+.video-draft-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  gap: 12px;
+}
+.video-draft-info > div {
+  min-width: 0;
+}
+.video-draft-info strong {
+  display: block;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.video-draft-info small {
+  display: block;
+  font-size: 10px;
+  color: #a28aac;
+  margin-top: 4px;
+}
+.post-video {
+  margin: 13px 0 15px;
+  overflow: hidden;
+  border: 1px solid #34233f;
+  border-radius: 11px;
+  background: #08060d;
+}
+.post-video video {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  background: #050507;
+}
+.video-caption {
+  display: block;
+  padding: 8px 12px;
+  color: #9985a8;
+  font-size: 10px;
+}
+.upload-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  color: #c6a5e6;
+  margin-top: 12px;
+}
+#video-upload-status progress {
+  width: 100%;
+  height: 6px;
+  accent-color: var(--purple);
+  display: block;
+  margin: 7px 0 13px;
+}
+#video-upload-status[hidden] {
+  display: none;
+}
+.compose-tools #draft-status {
+  max-width: 120px;
+}
+.compose-tools {
+  gap: 5px;
+}
+@media (max-width: 700px) {
+  .compose-tools #draft-status {
+    display: none;
+  }
+  .video-draft video {
+    max-height: 270px;
+  }
+  .video-draft-info {
+    padding: 10px 12px;
+  }
+  .video-draft-info strong {
+    font-size: 11px;
+  }
+  .post-video video {
+    max-height: 430px;
+  }
+  .video-hint {
+    font-size: 9px;
+  }
+  .post-video {
+    margin-top: 10px;
+  }
+  .video-picker {
+    width: 29px;
+    height: 29px;
+  }
+}
