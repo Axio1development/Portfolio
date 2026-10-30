@@ -1,8 +1,8 @@
-# // Logan's GitHub Portfolio 
+# // Axio's GitHub Portfolio 
 
 # // Last Updated: October 25th 2026
 
-Welcome, my name is Logan but my online name is Axio. I've made these projects purely for fun and because i love web development so much and don't want my skills to be rusty. Ill explain all of the work I've done all the folders connected to my portfolio and such. First ill explain my process on how i begin working on a website. i do need to know upfront if you want notes on the sites code because typically i know how it all will look so I've grown to not need notes. 
+Welcome, my online name is Axio. I've made these projects purely for fun and because i love web development so much and don't want my skills to be rusty. Ill explain all of the work I've done all the folders connected to my portfolio and such. First ill explain my process on how i begin working on a website. i do need to know upfront if you want notes on the sites code because typically i know how it all will look so I've grown to not need notes. 
 
 # // Some background on me 
 
@@ -64,6 +64,5 @@ Next area will be your classroom which is where the teacher account gives you a 
 
 With any questions, you can contact me at 
 
-Gmail / Outlook: axiomate.games@outlook.com or loganboccasini54@gmail.com
-Phone Number: 631-229-6248
+Gmail / Outlook: axiomate.games@outlook.com
 
